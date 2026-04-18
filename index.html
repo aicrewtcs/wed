@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John & Jane's Engagement Celebration</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Celebrate John and Jane's engagement with details, venue info, RSVP, and photo gallery." />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Engagement Celebration</p>
+      <h1>John & Jane</h1>
+      <p class="hero-copy">Join us for a joyful evening celebrating love, laughter, and the next chapter.</p>
+      <div class="hero-meta">
+        <span>June 21, 2026 · 4:00 PM</span>
+        <span>Sunset Gardens, 123 Celebration Lane</span>
+      </div>
+      <a class="button" href="#rsvp">RSVP Today</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro" id="about">
+      <div class="section-content">
+        <h2>About the Celebration</h2>
+        <p>We are excited to invite you to our engagement event. This special evening will bring together family and friends to celebrate John and Jane’s love story, with food, music, and unforgettable moments.</p>
+      </div>
+    </section>
+
+    <section class="section details" id="details">
+      <div class="section-grid">
+        <div class="card">
+          <h3>Date & Time</h3>
+          <p>Saturday, June 21, 2026<br />4:00 PM - 8:00 PM</p>
+        </div>
+        <div class="card">
+          <h3>Venue</h3>
+          <p>Sunset Gardens<br />123 Celebration Lane<br />Sample City</p>
+        </div>
+        <div class="card">
+          <h3>RSVP</h3>
+          <p>Email: <a href="mailto:sample@example.com">sample@example.com</a><br />Phone: (123) 456-7890</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section schedule" id="schedule">
+      <div class="section-content">
+        <h2>Evening Schedule</h2>
+        <ul class="schedule-list">
+          <li><strong>4:00 PM</strong> Guest arrival & welcome drinks</li>
+          <li><strong>5:00 PM</strong> Program remarks & toasts</li>
+          <li><strong>5:30 PM</strong> Dinner served</li>
+          <li><strong>7:00 PM</strong> Dancing, photos, and celebration</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="section-content">
+        <h2>Gallery</h2>
+        <p>Here are some moments to inspire the celebration.</p>
+        <div class="gallery-grid">
+          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80" alt="Romantic engagement dinner" />
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Couple celebration" />
+          <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80" alt="Flower arrangement" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section rsvp" id="rsvp">
+      <div class="section-content">
+        <h2>RSVP</h2>
+        <p>Please let us know if you can join us. Fill in your name and a quick message below, and we’ll follow up with details.</p>
+        <form id="rsvp-form" class="rsvp-form">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Smith" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Looking forward to celebrating!" rows="4"></textarea>
+
+          <button type="submit">Send RSVP</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Sample engagement event site created for GitHub Pages hosting.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('rsvp-form');
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+      const subject = encodeURIComponent('RSVP for John & Jane');
+      const body = encodeURIComponent(`Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\nMessage: ${decodeURIComponent(message)}`);
+      window.location.href = `mailto:sample@example.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
