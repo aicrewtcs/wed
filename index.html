@@ -40,8 +40,8 @@
           <p>Sunset Gardens<br />123 Celebration Lane<br />Sample City</p>
         </div>
         <div class="card">
-          <h3>RSVP</h3>
-          <p>Email: <a href="mailto:sample@example.com">sample@example.com</a><br />Phone: (123) 456-7890</p>
+          <h3>Location</h3>
+          <iframe src="https://maps.google.com/maps?q=Sunset+Gardens+123+Celebration+Lane+Sample+City&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </section>
@@ -62,10 +62,8 @@
       <div class="section-content">
         <h2>Gallery</h2>
         <p>Here are some moments to inspire the celebration.</p>
-        <div class="gallery-grid">
-          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80" alt="Romantic engagement dinner" />
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Couple celebration" />
-          <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80" alt="Flower arrangement" />
+        <div class="gallery-link">
+          <a href="https://photos.app.goo.gl/BBh8wMaKQHEqurWw7" target="_blank" class="button">View Our Photo Gallery</a>
         </div>
       </div>
     </section>
@@ -106,5 +104,9 @@
       window.location.href = `mailto:sample@example.com?subject=${subject}&body=${body}`;
     });
   </script>
+  <audio autoplay loop>
+    <source src="https://www.soundjay.com/misc/sounds/peaceful-garden.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>
